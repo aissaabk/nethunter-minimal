@@ -64,19 +64,19 @@ function set_strings() {
     CHROOT=kali-${SYS_ARCH}
     echo "Enter the user name: "  
     echo "1 - nano : If you do not have all the space or the Internet is weak it's recommended "
-    echo "2 - minimal : it's recommended "
+    echo "2 - minimal : it's recommended by default"
     echo "3 - full If the internet is stable and fast with enough space available "
     read type
     if [ "$type" = "nano" ||"$type" = "1" ]; then
-    IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    IMAGE_NAME=kalifs-${SYS_ARCH}-nano.tar.xz
+    SHA_NAME=kalifs-${SYS_ARCH}-nano.sha512sum
     
     elif [ "$type" = "full" ||"$type" = "3" ]; then
-    IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    IMAGE_NAME=kalifs-${SYS_ARCH}-full.tar.xz
+    SHA_NAME=kalifs-${SYS_ARCH}-full.sha512sum
     else
-    IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    IMAGE_NAME=kalifs-${SYS_ARCH}-minimal.tar.xz
+    SHA_NAME=kalifs-${SYS_ARCH}-minimal.sha512sum
     fi
 }    
 
