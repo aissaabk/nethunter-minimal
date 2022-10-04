@@ -69,14 +69,15 @@ function set_strings() {
     read type
     if [ "$type" = "nano" ||"$type" = "1" ]; then
     IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-minimal.sha512sum
-    fi
-    if [ "$type" = "full" ||"$type" = "3" ]; then
+    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    
+    elif [ "$type" = "full" ||"$type" = "3" ]; then
     IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-minimal.sha512sum
-    fi
+    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    else
     IMAGE_NAME=kalifs-${SYS_ARCH}-${type}.tar.xz
-    SHA_NAME=kalifs-${SYS_ARCH}-minimal.sha512sum
+    SHA_NAME=kalifs-${SYS_ARCH}-${type}.sha512sum
+    fi
 }    
 
 function prepare_fs() {
